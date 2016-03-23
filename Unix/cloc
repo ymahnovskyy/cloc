@@ -8826,7 +8826,7 @@ sub normalize_file_names {                   # {{{1
             $F_norm =~ s{^\./}{}g;  # remove leading ./
             if ($F_norm !~ m{^/}) {
                 # looks like a relative path; prefix with cwd
-                $F_norm = lc "$cwd/$F_norm";
+                $F_norm = "$cwd/$F_norm";
             }
         }
         $normalized{ $F_norm } = $F;
